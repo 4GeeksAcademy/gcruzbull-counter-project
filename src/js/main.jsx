@@ -24,10 +24,23 @@ setInterval(() => {
     min++
     sec = sec2 = 0
   }
+  if (min == 10) {
+    min2++
+    sec = sec2 = min = 0
+  }
+  if (min2 == 6) {
+    hour++
+    sec = sec2 = min = min2 = 0
+  }
+  if (hour == 10) {
+    hour2++
+    sec = sec2 = min = min2 = hour = 0
+  }
+  
   ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Home sec={sec} sec2={sec2} min={min} min2={min2} hour={hour} hour2={hour2}  />
   </React.StrictMode>,
 )
   sec++
-}, 100);  // interval corresponde a milisegundos. 1000 = 1 seg
+}, 1000);  // interval corresponde a milisegundos. 1000 = 1 seg
