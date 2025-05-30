@@ -9,7 +9,6 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
-
-/* .color-clock {
-    backgroundcolor : 'black':
-} */
+.card-size {
+    font-size: 100px;
+}
